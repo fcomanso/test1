@@ -96,7 +96,7 @@ Rails.application.configure do
       enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: '138.68.12.31' }
+  config.action_mailer.default_url_options = { host: 'ec2-52-36-74-212.us-west-2.compute.amazonaws.com' }
 
 
 
