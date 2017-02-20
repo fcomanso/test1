@@ -1,0 +1,26 @@
+<div data-sticky-container>
+  <div class="title-bar" data-sticky data-options="marginTop:0;" style="background-color: rgba(139, 140, 141, 0.65);" data-top-anchor="1" data-btm-anchor="root:top">
+    <div class="row">
+      <div class="title-bar-left">
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+        <a><strong>Tri Valley Cat Sitters</strong></a>
+      </div>
+
+      <div id="responsive-menu">
+        <div class="top-bar-left"></div>
+
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", '#about-tag' %></li>
+            <li><%= link_to "Cities", '#cities-tag' %></li>
+            <li><%= link_to "Services", '#services-tag' %></li>
+            <li><%= link_to "Contact", '#email-tag' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

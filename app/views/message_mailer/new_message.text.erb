@@ -1,0 +1,10 @@
+Name: <%= @message.name %>
+Email address: <%= @message.email %>
+
+<% if @message.phone_number.present? %>
+    Phone number: <%= number_to_phone @message.phone_number %>
+<% end %>
+
+wrote the following:<%= @message.content %>
+
+How the web site was found: <%= @message.survey %>

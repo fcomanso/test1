@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="title"
+        content="Your cat is what matters the most | Professional Bay Area TriValley Pet Sitters">
+
+  <meta name="description"
+        content="Professional cat care in the comfort of your own home by passionate cat lovers.
+        Loving care is currently provided in 4 California cities:
+    San Ramon, Danville, Dublin and Pleasanton. Your cat happiness is a phone call away - (510)449-9094 - ">
+
+  <meta name="google-site-verification" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+  <title><%= content_for?(:title) ? yield(:title) : 'Tri Valley Cat Sitters' %></title>
+
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <%= render 'layouts/google_analytics' %>
+</head>
+
+<body>
+<div class="content">
+
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
+
+</div>
+</body>
+</html>

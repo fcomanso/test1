@@ -1,0 +1,36 @@
+<footer class="footer">
+  <div class="row full-width">
+
+    <div class="small-12 medium-4 large-4 columns">
+      <a href="http://petsitllc.com" target="_blank"><%= image_tag "pet_sitters_assoc.jpg" %></a>
+      <p>Bonded and Insured through Pet Sitters Associates, LLC</p>
+    </div>
+
+    <div class="small-12 medium-4 large-4 columns">
+      <!--<h4>Find Us</h4>-->
+      <i class="fa fa-search-plus" aria-hidden="true"></i>
+
+      <ul class="footer-links">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", '#about-tag' %></li>
+        <li><%= link_to "Cities", '#cities-tag' %></li>
+        <li><%= link_to "Services", '#services-tag' %></li>
+        <li><%= link_to "Contact", '#email-tag' %></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-4 large-4 columns">
+      <a href="http://ebpsa.com" target="_blank"><%= image_tag "ebpca.jpg" %></a>
+      <p>Proud member of East Bay Pet Sitters Association</p>
+    </div>
+
+  </div>
+
+
+  <div class="text-bottom">
+    Tri Valley Cat Sitters © 2009-<%= Time.now.year %><br>
+    <a href="http://coderpal.net" target="_blank">Developed by coderpal.net</a>
+  </div>
+
+
+</footer>

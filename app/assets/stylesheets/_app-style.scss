@@ -1,0 +1,481 @@
+@import 'foundation_and_overrides';
+
+$background_color: #f9f1df;
+$hover_color: #f9e4b8;
+$title_color: #8a8a8a;
+$email_color: #d1d1d1;
+
+*{
+  font-family: 'Raleway', sans-serif;
+  list-style: none;
+}
+
+body{
+  height: auto !important;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content{
+  flex: 1 0;
+  background-color: $background_color;
+}
+
+// HERO
+.hero {
+  background: asset-data-url("cat_hero.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+//IPad portrait and landscape
+@media only screen
+and (min-device-width : 760px)
+and (max-device-width: 1024px){
+  .hero {
+    background: asset-data-url("cat_hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+//Iphone 5 & 5s portrait and landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width: 568px){
+  .hero {
+    background: asset-data-url("cat_hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+//IPhone 6 portrait and landscape
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width: 667px){
+  .hero {
+    background: asset-data-url("cat_hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+//IPhone 6 Plus portrait and landscape
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width: 736px){
+  .hero {
+    background: asset-data-url("cat_hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+#content {
+  padding: 0 2rem;
+  position: absolute;
+  top: 46%;
+  @include breakpoint(large){
+    top: 50%;
+  }
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  h1 {
+    color: #e5e4e8;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    @include breakpoint(medium){
+      font-size: 2.8rem;
+    }
+    @include breakpoint(large){
+      font-size: 3rem;
+      letter-spacing: 0.5rem;
+    }
+    font-weight: 800;
+    text-align: center;
+  }
+}
+
+// NAVBAR
+.title-bar {
+  width: 100%;
+  background-color: rgba(139, 140, 141, 0.65);
+}
+
+.title-bar a {
+  color: white;
+  font-size: 1rem;
+  &:hover {
+    color: $hover_color;
+  }
+  @include breakpoint(medium){
+    font-size: 1.1rem;
+  }
+  @include breakpoint(large){
+  font-size: 1.5rem;
+}
+}
+
+.title-bar-left {
+  padding: 0.7rem 0;
+  line-height: 1;
+}
+
+#responsive-menu a {
+  color: white;
+  font-size: 0.9rem;
+  &:hover {
+    color: $hover_color;
+  }
+  @include breakpoint(medium){
+    font-size: 1rem;
+  }
+  @include breakpoint(large){
+    font-size: 1.2rem;
+  }
+}
+
+// ABOUT
+.about{
+  margin-bottom: 2rem;
+  p{
+    font-size: .9rem;
+    @include breakpoint(medium){
+      font-size: 1.2rem;
+    }
+  }
+
+  h3#confort {
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+    color: $title_color;
+  }
+  h3{
+    color: $title_color;
+    text-align: left;
+  }
+}
+
+/*-- SHOW CATS --*/
+section.cats-pictures {
+  padding: 0;
+}
+
+.cats-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+ul.cats-showcase {
+  margin: 0 0;
+}
+
+.cats-showcase li {
+  display: block;
+  float: left;
+  width: 50%;
+  @include breakpoint(medium){
+    width: 25%;
+  }
+}
+
+figure.cat-photo.hidden{
+  display: none;
+  @include breakpoint(medium){
+    display: block;
+  }
+}
+
+.cat-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.cat-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.cat-photo img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+
+}
+
+// CITIES
+section.cities{
+  background-color: white;
+  padding: 0 0.5rem 3rem;
+  @include breakpoint(medium){
+    padding-bottom: 3rem;
+  }
+}
+
+.cities h2 {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  color: $title_color;
+  font-weight: 700;
+}
+
+// SERVICES
+section.services{
+  margin: 0;
+  padding: 0 0.5rem 3rem;
+  @include breakpoint(medium){
+    padding-bottom: 3rem;
+    padding-left: 0;
+  }
+}
+
+h2#services {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  color: $title_color;
+  font-weight: 700;
+}
+
+.pricing-table {
+  border: solid 1px #DDDDDD;
+  background-color: lightgrey;
+  margin: 0;
+}
+
+.pricing-table li {
+  border-bottom: dotted 1px #DDDDDD;
+  font-size: 1rem;
+  @include breakpoint(medium){
+    font-size: 1.3rem;
+  }
+  text-align: center;
+  padding: 0.2rem 0.6rem;
+  @include breakpoint(medium){
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+.pricing-table li:last-child {
+  border-bottom: 0;
+}
+
+.pricing-table .title {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  @include breakpoint(medium){
+    font-size: 1.5rem;
+  }
+  border-bottom: 0;
+}
+
+.title{
+  background-color: #00c700;
+}
+
+.pricing-table .price {
+  background-color: #F6F6F6;
+  color: #333333;
+  font-size: 1.3rem;
+  @include breakpoint(medium){
+    font-size: 1.9rem;
+  }
+  font-weight: bold;
+  border-bottom: 0;
+}
+
+p#price{
+  font-size: 0.8rem;
+  @include breakpoint(medium){
+    font-size: 1rem;
+  }
+
+  font-weight: normal;
+}
+
+.pricing-table .description {
+  color: #777777;
+  font-size: 1.2rem;
+  @include breakpoint(medium){
+    font-size: 1.5rem;
+  }
+  font-weight: bold;
+}
+.pricing-table .button {
+  margin: 0;
+}
+
+.active-tb {
+  position: relative;
+  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+  transform: scale(1);
+  border: 0;
+  transition: 0.4s ease;
+  z-index: 13;
+}
+
+.active-tb:hover {
+  position: relative;
+  box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.5);
+  transform: scale(1.25);
+  border: 0;
+  z-index: 15;
+}
+
+// EMAIL FORM
+.email-form{
+  //background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0,0, 0)), url("https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=def277d43764315bfef63f3465a3eba2");background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0,0, 0)), asset-data-url("cat-hand.jpg");background-size: cover;
+  background-position: center;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+#error_explanation{
+  h2{
+    font-weight: bold;
+  }
+  color: red;
+  font-size: 1.2rem;
+}
+
+h2#email {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  color: #d1d1d1;
+  font-weight: 700;
+}
+
+h4#telephone{
+  text-align: center;
+  margin: 0;
+}
+h4 a{
+  color: #d1d1d1;
+  font-weight: 600;
+  &:hover{
+    color: $hover_color;
+  }
+}
+
+
+#message_name, #message_email, #message_phone_number,
+#message_content, #message_survey{
+  background-color: $email_color;
+}
+.email-form p{
+  text-align: center;
+  font-size: 0.9rem;
+  @include breakpoint(medium){
+    font-size: 1.2rem;
+  }
+  font-weight: 500;
+  color: #d1d1d1;
+}
+
+h2#email {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  color: #d1d1d1;
+}
+
+.send{
+  text-align: center;
+}
+
+.send input.button.default{
+  font-size: 1rem;
+}
+
+
+// FOOTER
+.full-width {
+  max-width: 1400px;
+}
+
+.footer{
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+.columns{
+  padding: 0 1rem;
+}
+
+.fa-search-plus{
+  font-size: 3rem;
+  color: $title_color;
+  padding-bottom: 0.5rem;
+}
+
+.footer h4{
+  letter-spacing: 0.3rem;
+  color: $title_color;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.footer p{
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.9rem;
+  @include breakpoint(medium){
+    font-size: 1rem;
+  }
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+ul.footer-links a{
+  margin-left: -1rem;
+  font-weight: bold;
+  color: #fff;
+  &:hover{
+    color: $hover_color;
+  }
+}
+
+.text-bottom{
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  @include breakpoint(medium){
+    letter-spacing: 0.3rem;
+  }
+  text-transform: uppercase;
+}
+
+.text-bottom a{
+  margin-top: 0;
+  text-transform: none;
+  color: white;
+  &:hover{
+    color: $hover_color;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+  }
+}

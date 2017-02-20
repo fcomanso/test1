@@ -1,0 +1,178 @@
+<% provide :title, 'Tri Valley Cat Sitters' %>
+
+<section class="hero">
+
+  <%= render 'layouts/navbar' %>
+
+  <div id="content">
+    <h1>I'm yearning for my cat sitter...</h1>
+  </div>
+
+</section>
+
+<section class="about" id="about-tag">
+  <div class="row">
+    <div class="large-12 columns">
+      <h3 id="confort">...in the comfort of "meow"n home</h3>
+      <p>
+        Hi! I am Diane Parker. Together with my daughter Nikki, we provide love and care to your kitties while you are
+        away.
+        We come to your home where your cats are comfortable, safe, and happy.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-4 columns">
+      <h3>Loving</h3>
+      <p>
+        We have both grown up with cats -- we love cats and cats love us! We will be your kitties' playmate, or respect
+        their privacy,
+        whichever they prefer. Making them happy is what matters most.
+        <!--You could call us cat people &#45;&#45; they love us and we love them. We give a lot of attention and playtime-->
+        <!--to your kitties who are outgoing, and respect the privacy of your furry friends who are shy and would rather be left alone.-->
+      </p>
+    </div>
+
+    <div class="large-4 columns">
+      <h3>Stressless</h3>
+      <p>
+        Most cats don't like boarding facilities. We don't want your friends to be huddled in an unknown environment and
+        exposed to illness.
+        Cats can get anxious or depressed when caged and around barking dogs. Our services offer a better alternative.
+      </p>
+    </div>
+
+    <div class="large-4 columns">
+      <h3>Trustworthy</h3>
+      <p>
+        We want to give you peace of mind, so the well-being of your cat is our top priority. You can leave your home
+        knowing that an important part of your family, your cat,
+        will be loved and taken care of by reliable, bonded and insured professionals.
+    </div>
+
+  </div>
+</section>
+
+<section class="cats-pictures" >
+  <ul class="cats-showcase clearfix">
+    <li>
+      <figure class="cat-photo">
+        <%= image_tag "cat_mirror_1.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo">
+        <%= image_tag "cat_resting.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo hidden">
+        <%= image_tag "kitten_playing.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo hidden">
+        <%= image_tag "cat_blue_eyes.jpg" %>
+      </figure>
+    </li>
+  </ul>
+
+  <ul class="cats-showcase clearfix">
+    <li>
+      <figure class="cat-photo">
+        <%= image_tag "cat_calico.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo">
+        <%= image_tag "cat_mirror_2.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo hidden">
+        <%= image_tag "cat_playing.jpg" %>
+      </figure>
+    </li>
+
+    <li>
+      <figure class="cat-photo hidden">
+        <%= image_tag "cat_grey.jpg" %>
+      </figure>
+    </li>
+  </ul>
+</section>
+
+<section class="cities" id="cities-tag">
+  <div class="row">
+    <h2>Currently caring for your cat in these cities</h2>
+
+    <div class="row small-up-2 large-up-4">
+      <div class="column">
+        <%= image_tag "San_Ramon_California.png" %>
+      </div>
+
+      <div class="column">
+        <%= image_tag "Danville_California.png" %>
+      </div>
+
+      <div class="column">
+       <%= image_tag "Dublin_California.png" %>
+      </div>
+
+      <div class="column">
+        <%= image_tag "Pleasanton_California.png" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services-tag">
+  <div class="row" id="root">
+    <div class="large-12 columns">
+      <h2 id="services">Let's keep your kitty happy!</h2>
+    </div>
+ </div>
+
+  <div class="row">
+    <div class="small-12 small-centered medium-9 medium-centered large-6 large-centered columns">
+      <ul class="pricing-table active-tb shadow mrgn-20-top">
+        <li class="title">Cat care services include...</li>
+        <li class="price">Starting at $25.00 per visit
+          <p id="price">This price may be subject to change depending on the circumstances
+            such as multiple cats, other species, longer visits.
+          </p>
+
+        </li>
+        <li class="description">Cat care includes:</li>
+        <li>30 minute visits once or twice a day</li>
+        <li>Lots of tender loving care and playtime</li>
+        <li>Fresh food and water</li>
+        <li>Litter box cleanup</li>
+        <li class="description">Home care includes:</li>
+        <li>Mail and newspapers picked-up</li>
+        <li>Light plant watering</li>
+        <li>Garbage & recycle bins to curb and back</li>
+        <li>"Lived in" look for your home</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="email-form" id="email-tag">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h2 id="email">We are looking forward to working with you!</h2>
+      <h4 id="telephone"><a href="tel:15104499094"> <i class="fa fa-phone" aria-hidden="true"></i> Give us a call at (510) 449-9094</a></h4>
+      <p>You can also email us with questions or to schedule services for your fuzzy loved one(s).</p>
+    </div>
+  </div>
+
+  <%= render "messages/new" %>
+
+</section>

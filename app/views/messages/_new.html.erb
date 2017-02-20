@@ -1,0 +1,38 @@
+<%= form_for @message, url: contact_path do |f| %>
+
+    <div class="row">
+      <div class=" small-12 small-centered medium-9 medium-centered large-6 large-centered columns">
+
+        <% if @message.errors.any? %>
+            <div id="error_explanation">
+              <h2>
+                <%= pluralize(@message.errors.count, "error") %> prohibited
+                this message from being saved:
+              </h2>
+              <ul>
+                <% @message.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <div>
+          <%= f.text_field :name, placeholder: "Name" %>
+
+          <%= f.email_field :email, placeholder: "Email" %>
+
+          <%= f.text_field :phone_number, placeholder: "Telephone" %>
+
+          <%= f.text_area :content, placeholder: "Message", size: "60x9" %>
+
+          <%= f.select :survey, options_for_select([['Advertisement'], ['Friends'],
+                                                    ['Internet Search'], ['Referral'], ['Yelp'],
+                                                    ['Other']], selected: :survey), include_blank: 'How did you find us?' %>
+
+          <div class="send"><input type="submit" class="button default" value="Send It!"></div>
+        </div>
+      </div>
+    </div>
+
+<% end %>
